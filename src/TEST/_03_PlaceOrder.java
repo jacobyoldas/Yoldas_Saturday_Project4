@@ -33,17 +33,20 @@ public class _03_PlaceOrder extends BaseDriver {
     myAccountPageElements.signInButton.click();
 
     String actualText = myAccountPageElements.mayAccountHeader.getText();
-    String expectedText = "MY ACCOUNT";
+    String expectedText= "MY ACCOUNT";
 
     Assert.assertEquals(actualText, expectedText);
 
     homePageElements.returnHome.click();
     JavascriptExecutor js = (JavascriptExecutor) driver;
     js.executeScript("window.scrollBy(0,750)");
+    wait.until(ExpectedConditions.elementToBeClickable(homePageElements.productClick));
     homePageElements.productClick.click();
     driver.switchTo().frame(homePageElements.iframe);
+    wait.until(ExpectedConditions.elementToBeClickable(homePageElements.addToCard));
     homePageElements.addToCard.click();
     driver.switchTo().parentFrame();
+    wait.until(ExpectedConditions.elementToBeClickable(homePageElements.proceedButton1));
     homePageElements.proceedButton1.click();
     js.executeScript("window.scrollBy(0,350)");
     homePageElements.proceedButton2.click();

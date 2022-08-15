@@ -45,7 +45,7 @@ public class BaseDriver {
   }
   @AfterMethod(alwaysRun = true)
   public void tearDown() {
-    //driver.quit();
+    driver.quit();
   }
 }
 
