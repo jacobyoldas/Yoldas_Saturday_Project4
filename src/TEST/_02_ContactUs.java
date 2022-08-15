@@ -1,14 +1,20 @@
 package TEST;
 
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 import POM.HomePageElements;
 import POM.LogInPageElements;
 import POM.MyAccountPageElements;
 import UTILS.BaseDriver;
 import java.time.Duration;
 import java.util.Locale;
+import java.util.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
