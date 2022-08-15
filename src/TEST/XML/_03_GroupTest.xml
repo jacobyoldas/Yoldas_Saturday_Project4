@@ -1,0 +1,18 @@
+<suite name="Regression Test Suite">
+  <groups>
+    <run>
+      <include name="Regression"></include>
+    </run>
+  </groups>
+  <test name="GroupTest(PlaceOrder-ContactUs)">
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="browser" value="firefox"></parameter>
+    <parameter name="message" value="Measures answered spin bare logistics amongst arrives, florence type titles template mono. "></parameter>
+    <classes>
+      <class name="TEST._02_ContactUs"> </class>
+      <class name="TEST._03_PlaceOrder"> </class>
+    </classes>
+  </test>
+
+</suite>
+
